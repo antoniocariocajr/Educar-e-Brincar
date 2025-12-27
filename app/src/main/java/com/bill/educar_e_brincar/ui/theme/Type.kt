@@ -25,21 +25,21 @@ val fredokaOneFamily = FontFamily(
 val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = fredokaOneFamily,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
         fontSize = 48.sp
     ),
     bodyLarge = TextStyle(
         fontFamily = fredokaOneFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 18.sp,
-        lineHeight = 24.sp,
+        fontWeight = FontWeight.Bold,
+        fontSize = 24.sp,
+        lineHeight = 28.sp,
         letterSpacing = 0.5.sp
     ),
     titleLarge = TextStyle(
         fontFamily = fredokaOneFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 24.sp,
-        lineHeight = 28.sp,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 34.sp,
+        lineHeight = 40.sp,
         letterSpacing = 0.sp
     )
 )

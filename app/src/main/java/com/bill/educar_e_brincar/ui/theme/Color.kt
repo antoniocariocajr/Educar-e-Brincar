@@ -20,3 +20,19 @@ val LightPurple = Color(0xFFE6E6FA)
 val White = Color(0xFFFFFFFF)
 val Black = Color(0xFF000000)
 val Gray = Color(0xFF808080)
+val DarkBlue = Color(0xFF00008B) // Added Dark Blue
+
+// New custom colors
+val CustomBlue = Color(0xFF2a75bb)
+val AliceBlue = Color(0xFFf0f8ff)
+val DodgerBlue = Color(0xFF1290ff)
+val Goldenrod = Color(0xFFdaa520)
+val Coral = Color(0xFFff7f50)
+val Salmon = Color(0xFFfa8072)
+val MediumAquamarine = Color(0xFF66CDAA)
+val MediumSpringGreen = Color(0xFF00FA9A)
+
+// Primary colors for the color screen
+val Red = Color(0xFFFF0000)
+val Yellow = Color(0xFFFFFF00)
+val Blue = Color(0xFF0000FF)
