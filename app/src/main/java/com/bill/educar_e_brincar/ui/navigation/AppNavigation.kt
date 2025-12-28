@@ -21,13 +21,13 @@ fun AppNavigation() {
             CoresScreen(navController = navController)
         }
         composable("numeros") {
-            NumerosScreen()
+            NumerosScreen(navController = navController)
         }
         composable("formas") {
-            FormasScreen()
+            FormasScreen(navController = navController)
         }
         composable("letras") {
-            LetrasScreen()
+            LetrasScreen(navController = navController)
         }
     }
 }
