@@ -56,6 +56,8 @@ fun HomeScreen(navController: NavController, modifier: Modifier = Modifier) {
         AppButton(onClick = { navController.navigate("formas") }, text = "Formas")
         Spacer(modifier = Modifier.height(24.dp))
         AppButton(onClick = { navController.navigate("letras") }, text = "Letras")
+        Spacer(modifier = Modifier.height(24.dp))
+        AppButton(onClick = { navController.navigate("animais") }, text = "Animais")
     }
 }
 
