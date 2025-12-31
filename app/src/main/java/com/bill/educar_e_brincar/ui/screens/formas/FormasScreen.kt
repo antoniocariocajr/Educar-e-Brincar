@@ -1,4 +1,4 @@
-package com.bill.educar_e_brincar.ui.screens
+package com.bill.educar_e_brincar.ui.screens.formas
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,13 +19,13 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.bill.educar_e_brincar.ui.theme.DodgerBlue
+import com.bill.educar_e_brincar.ui.theme.Coral
+import com.bill.educar_e_brincar.ui.theme.CustomBlue
 import com.bill.educar_e_brincar.ui.theme.EducareBrincarTheme
-import com.bill.educar_e_brincar.ui.theme.Goldenrod
 import com.bill.educar_e_brincar.ui.theme.MediumAquamarine
 
 @Composable
-fun NumerosScreen(navController: NavController, modifier: Modifier = Modifier) {
+fun FormasScreen(navController: NavController, modifier: Modifier = Modifier) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.popBackStack() }) {
@@ -42,27 +42,39 @@ fun NumerosScreen(navController: NavController, modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = buildAnnotatedString {
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = Goldenrod)) {
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = MediumAquamarine)) {
                         append("Conhecendo ")
                     }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = DodgerBlue)) {
-                        append("os ")
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = CustomBlue)) {
+                        append("as ")
                     }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = MediumAquamarine)) {
-                        append("Números")
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = Coral)) {
+                        append("Formas")
                     }
                 },
                 style = MaterialTheme.typography.titleLarge
             )
-            // TODO: Adicionar aqui os botões e o conteúdo da tela de Números
+            Spacer(modifier = Modifier.height(48.dp))
+
+            AppButton(
+                onClick = { navController.navigate("aprender_formas") },
+                text = "Aprender",
+                colors = ButtonDefaults.buttonColors(containerColor = Yellow, contentColor = DodgerBlue)
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            AppButton(
+                onClick = { /* TODO: Ação Brincar */ },
+                text = "Brincar",
+                colors = ButtonDefaults.buttonColors(containerColor = Red, contentColor = LightYellow)
+            )
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun NumerosScreenPreview() {
+fun FormasScreenPreview() {
     EducareBrincarTheme {
-        NumerosScreen(rememberNavController())
+        FormasScreen(rememberNavController())
     }
 }

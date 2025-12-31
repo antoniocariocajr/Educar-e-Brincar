@@ -1,4 +1,4 @@
-package com.bill.educar_e_brincar.ui.screens
+package com.bill.educar_e_brincar.ui.screens.numeros
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,13 +19,13 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.bill.educar_e_brincar.ui.theme.DarkBlue
+import com.bill.educar_e_brincar.ui.theme.DodgerBlue
 import com.bill.educar_e_brincar.ui.theme.EducareBrincarTheme
-import com.bill.educar_e_brincar.ui.theme.LightPink
-import com.bill.educar_e_brincar.ui.theme.MediumSpringGreen
+import com.bill.educar_e_brincar.ui.theme.Goldenrod
+import com.bill.educar_e_brincar.ui.theme.MediumAquamarine
 
 @Composable
-fun LetrasScreen(navController: NavController, modifier: Modifier = Modifier) {
+fun NumerosScreen(navController: NavController, modifier: Modifier = Modifier) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.popBackStack() }) {
@@ -42,27 +42,39 @@ fun LetrasScreen(navController: NavController, modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = buildAnnotatedString {
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = DarkBlue)) {
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = Goldenrod)) {
                         append("Conhecendo ")
                     }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = LightPink)) {
-                        append("as ")
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = DodgerBlue)) {
+                        append("os ")
                     }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = MediumSpringGreen)) {
-                        append("Letras")
+                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = MediumAquamarine)) {
+                        append("Números")
                     }
                 },
                 style = MaterialTheme.typography.titleLarge
             )
-            // TODO: Adicionar aqui os botões e o conteúdo da tela de Letras
+            Spacer(modifier = Modifier.height(48.dp))
+
+            AppButton(
+                onClick = { navController.navigate("aprender_numeros") },
+                text = "Aprender",
+                colors = ButtonDefaults.buttonColors(containerColor = Yellow, contentColor = DodgerBlue)
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            AppButton(
+                onClick = { /* TODO: Ação Brincar */ },
+                text = "Brincar",
+                colors = ButtonDefaults.buttonColors(containerColor = Red, contentColor = LightYellow)
+            )
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun LetrasScreenPreview() {
+fun NumerosScreenPreview() {
     EducareBrincarTheme {
-        LetrasScreen(rememberNavController())
+        NumerosScreen(rememberNavController())
     }
 }
