@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.bill.educar_e_brincar.ui.screens.CoresScreen
 import com.bill.educar_e_brincar.ui.screens.FormasScreen
+import com.bill.educar_e_brincar.ui.screens.AnimaisScreen
 import com.bill.educar_e_brincar.ui.screens.HomeScreen
 import com.bill.educar_e_brincar.ui.screens.LetrasScreen
 import com.bill.educar_e_brincar.ui.screens.NumerosScreen
@@ -28,6 +29,9 @@ fun AppNavigation() {
         }
         composable("letras") {
             LetrasScreen(navController = navController)
+        }
+        composable("animais") {
+            AnimaisScreen(navController = navController)
         }
     }
 }
