@@ -53,7 +53,7 @@ fun VogaisScreen(navController: NavController, modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(24.dp))
             AppButton(
-                onClick = { navController.navigate("desenhar_letras") },
+                onClick = { navController.navigate("desenhar_vogais") },
                 text = "Desenhar",
                 colors = ButtonDefaults.buttonColors(containerColor = Blue, contentColor = LightPink)
             )

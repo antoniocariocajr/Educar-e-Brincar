@@ -25,6 +25,7 @@ fun DesenharCanvasScreen(
             FloatingActionButton(onClick = { navController.popBackStack() }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar")
             }
+
         }
     ) { innerPadding ->
         Column(

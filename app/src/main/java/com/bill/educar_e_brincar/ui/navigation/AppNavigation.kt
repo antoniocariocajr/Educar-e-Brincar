@@ -19,7 +19,9 @@ import com.bill.educar_e_brincar.ui.screens.formas.AprenderFormasScreen
 import com.bill.educar_e_brincar.ui.screens.letras.AprenderLetrasScreen
 import com.bill.educar_e_brincar.ui.screens.letras.DesenharLetrasScreen
 import com.bill.educar_e_brincar.ui.screens.numeros.AprenderNumerosScreen
+import com.bill.educar_e_brincar.ui.screens.numeros.DesenharNumerosScreen
 import com.bill.educar_e_brincar.ui.screens.vogais.AprenderVogaisScreen
+import com.bill.educar_e_brincar.ui.screens.vogais.DesenharVogaisScreen
 import com.bill.educar_e_brincar.ui.screens.vogais.VogaisScreen
 
 @Composable
@@ -67,6 +69,12 @@ fun AppNavigation() {
         }
         composable("desenhar_letras") {
             DesenharLetrasScreen(navController = navController)
+        }
+        composable("desenhar_vogais") {
+            DesenharVogaisScreen(navController = navController)
+        }
+        composable("desenhar_numeros") {
+            DesenharNumerosScreen(navController = navController)
         }
         composable(
             route = "desenhar_canvas/{letra}",
