@@ -2,10 +2,13 @@ package com.bill.educar_e_brincar.ui.screens.numeros
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -17,12 +20,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.bill.educar_e_brincar.ui.components.AppButton
 import com.bill.educar_e_brincar.ui.theme.DodgerBlue
 import com.bill.educar_e_brincar.ui.theme.EducareBrincarTheme
 import com.bill.educar_e_brincar.ui.theme.Goldenrod
+import com.bill.educar_e_brincar.ui.theme.LightYellow
 import com.bill.educar_e_brincar.ui.theme.MediumAquamarine
+import com.bill.educar_e_brincar.ui.theme.Red
+import com.bill.educar_e_brincar.ui.theme.Yellow
 
 @Composable
 fun NumerosScreen(navController: NavController, modifier: Modifier = Modifier) {

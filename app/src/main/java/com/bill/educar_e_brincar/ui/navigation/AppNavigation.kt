@@ -4,15 +4,16 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.bill.educar_e_brincar.ui.screens.cores.AprenderCoresScreen
-import com.bill.educar_e_brincar.ui.screens.cores.CoresScreen
-import com.bill.educar_e_brincar.ui.screens.formas.AprenderFormasScreen
+import com.bill.educar_e_brincar.ui.screens.AnimaisScreen
+import com.bill.educar_e_brincar.ui.screens.CoresScreen
 import com.bill.educar_e_brincar.ui.screens.formas.FormasScreen
 import com.bill.educar_e_brincar.ui.screens.HomeScreen
-import com.bill.educar_e_brincar.ui.screens.letras.AprenderLetrasScreen
 import com.bill.educar_e_brincar.ui.screens.letras.LetrasScreen
-import com.bill.educar_e_brincar.ui.screens.numeros.AprenderNumerosScreen
 import com.bill.educar_e_brincar.ui.screens.numeros.NumerosScreen
+import com.bill.educar_e_brincar.ui.screens.cores.AprenderCoresScreen
+import com.bill.educar_e_brincar.ui.screens.formas.AprenderFormasScreen
+import com.bill.educar_e_brincar.ui.screens.letras.AprenderLetrasScreen
+import com.bill.educar_e_brincar.ui.screens.numeros.AprenderNumerosScreen
 import com.bill.educar_e_brincar.ui.screens.vogais.AprenderVogaisScreen
 import com.bill.educar_e_brincar.ui.screens.vogais.VogaisScreen
 
@@ -26,32 +27,35 @@ fun AppNavigation() {
         composable("cores") {
             CoresScreen(navController = navController)
         }
-        composable("aprender_cores") {
-            AprenderCoresScreen(navController = navController)
-        }
         composable("numeros") {
             NumerosScreen(navController = navController)
-        }
-        composable("aprender_numeros") {
-            AprenderNumerosScreen(navController = navController)
         }
         composable("formas") {
             FormasScreen(navController = navController)
         }
-        composable("aprender_formas") {
-            AprenderFormasScreen(navController = navController)
-        }
         composable("letras") {
             LetrasScreen(navController = navController)
-        }
-        composable("aprender_letras") {
-            AprenderLetrasScreen(navController = navController)
         }
         composable("vogais") {
             VogaisScreen(navController = navController)
         }
+        composable("animais") {
+            AnimaisScreen(navController = navController)
+        }
+        composable("aprender_cores") {
+            AprenderCoresScreen(navController = navController)
+        }
+        composable("aprender_formas") {
+            AprenderFormasScreen(navController = navController)
+        }
+        composable("aprender_letras") {
+            AprenderLetrasScreen(navController = navController)
+        }
         composable("aprender_vogais") {
             AprenderVogaisScreen(navController = navController)
+        }
+        composable("aprender_numeros") {
+            AprenderNumerosScreen(navController = navController)
         }
     }
 }

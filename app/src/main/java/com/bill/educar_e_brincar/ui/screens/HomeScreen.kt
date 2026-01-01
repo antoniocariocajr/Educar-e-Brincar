@@ -51,11 +51,13 @@ fun HomeScreen(navController: NavController, modifier: Modifier = Modifier) {
 
         AppButton(onClick = { navController.navigate("cores") }, text = "Cores")
         Spacer(modifier = Modifier.height(24.dp))
-        AppButton(onClick = { navController.navigate("numeros") }, text = "Números")
-        Spacer(modifier = Modifier.height(24.dp))
         AppButton(onClick = { navController.navigate("formas") }, text = "Formas")
         Spacer(modifier = Modifier.height(24.dp))
-        AppButton(onClick = { navController.navigate("letras") }, text = "Letras")
+        AppButton(onClick = { navController.navigate("letras") }, text = "Alfabeto")
+        Spacer(modifier = Modifier.height(24.dp))
+        AppButton(onClick = { navController.navigate("vogais") }, text = "Vogais")
+        Spacer(modifier = Modifier.height(24.dp))
+        AppButton(onClick = { navController.navigate("numeros") }, text = "Números")
         Spacer(modifier = Modifier.height(24.dp))
         AppButton(onClick = { navController.navigate("animais") }, text = "Animais")
     }
