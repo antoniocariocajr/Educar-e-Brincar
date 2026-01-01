@@ -5,69 +5,39 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bill.educar_e_brincar.ui.components.AppButton
+import com.bill.educar_e_brincar.ui.components.CategoryMenuScreen
 import com.bill.educar_e_brincar.ui.theme.Blue
-import com.bill.educar_e_brincar.ui.theme.DarkBlue
 import com.bill.educar_e_brincar.ui.theme.DodgerBlue
 import com.bill.educar_e_brincar.ui.theme.EducareBrincarTheme
-import com.bill.educar_e_brincar.ui.theme.LightPink
 import com.bill.educar_e_brincar.ui.theme.LightYellow
-import com.bill.educar_e_brincar.ui.theme.MediumSpringGreen
 import com.bill.educar_e_brincar.ui.theme.Red
+import com.bill.educar_e_brincar.ui.theme.White
 import com.bill.educar_e_brincar.ui.theme.Yellow
 
 @Composable
 fun LetrasScreen(navController: NavController, modifier: Modifier = Modifier) {
-    Scaffold(
-        floatingActionButton = {
-            FloatingActionButton(onClick = { navController.popBackStack() }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar")
-            }
-        }
-    ) { innerPadding ->
+    CategoryMenuScreen(
+        navController = navController,
+        title = "Conhecendo as Letras",
+        modifier = modifier
+    ) {
+        // Conteúdo específico para a tela de Letras
         Column(
-            modifier = modifier
-                .fillMaxSize()
-                .padding(innerPadding),
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = buildAnnotatedString {
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = DarkBlue)) {
-                        append("Conhecendo ")
-                    }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = LightPink)) {
-                        append("as ")
-                    }
-                    withStyle(style = MaterialTheme.typography.titleLarge.toSpanStyle().copy(color = MediumSpringGreen)) {
-                        append("Letras")
-                    }
-                },
-                style = MaterialTheme.typography.titleLarge
-            )
-            Spacer(modifier = Modifier.height(48.dp))
-
             AppButton(
-                onClick = { navController.navigate("aprender_letras") },
+                onClick = {  navController.navigate("aprender_letras")},
                 text = "Aprender",
                 colors = ButtonDefaults.buttonColors(containerColor = Yellow, contentColor = DodgerBlue)
             )
@@ -75,7 +45,7 @@ fun LetrasScreen(navController: NavController, modifier: Modifier = Modifier) {
             AppButton(
                 onClick = { navController.navigate("desenhar_letras") },
                 text = "Desenhar",
-                colors = ButtonDefaults.buttonColors(containerColor = Blue, contentColor = LightPink)
+                colors = ButtonDefaults.buttonColors(containerColor = Blue, contentColor = White)
             )
             Spacer(modifier = Modifier.height(24.dp))
             AppButton(

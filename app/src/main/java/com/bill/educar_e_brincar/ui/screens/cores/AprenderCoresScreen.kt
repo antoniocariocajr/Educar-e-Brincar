@@ -10,36 +10,35 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.bill.educar_e_brincar.R
 import com.bill.educar_e_brincar.ui.theme.*
 import com.bill.educar_e_brincar.utils.SoundPlayer
+import com.bill.educar_e_brincar.utils.TextToSpeechManager
 
-data class Cor(val nome: String, val cor: Color, val som: Int)
+data class Cor(val nome: String, val cor: Color)
 
 @Composable
 fun AprenderCoresScreen(navController: NavController) {
-    val context = LocalContext.current
     val cores = listOf(
-        Cor("Vermelho", Red, R.raw.vermelho),
-        Cor("Verde", Green, R.raw.verde),
-        Cor("Azul", Blue, R.raw.azul),
-        Cor("Amarelo", Yellow, R.raw.amarelo),
-        Cor("Laranja", Orange, R.raw.laranja),
-        Cor("Roxo", Purple, R.raw.roxo),
-        Cor("Rosa", Pink, R.raw.rosa),
-        Cor("Marrom", Brown, R.raw.marrom),
-        Cor("Preto", Black, R.raw.preto),
-        Cor("Branco", White, R.raw.branco)
+        Cor("Vermelho", Red),
+        Cor("Verde", Green),
+        Cor("Azul", Blue),
+        Cor("Amarelo", Yellow),
+        Cor("Laranja", Orange),
+        Cor("Roxo", Purple),
+        Cor("Rosa", Pink),
+        Cor("Marrom", Brown),
+        Cor("Preto", Black),
+        Cor("Branco", White)
     )
 
     var indiceAtual by remember { mutableStateOf(0) }
     val corAtual = cores[indiceAtual]
 
     LaunchedEffect(indiceAtual) {
-        SoundPlayer.playSound(context, corAtual.som)
+        // Lê o nome da cor usando Text-to-Speech
+        TextToSpeechManager.speak(corAtual.nome)
     }
 
     DisposableEffect(Unit) {
