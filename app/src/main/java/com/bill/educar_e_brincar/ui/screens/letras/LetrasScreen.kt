@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bill.educar_e_brincar.ui.components.AppButton
+import com.bill.educar_e_brincar.ui.theme.Blue
 import com.bill.educar_e_brincar.ui.theme.DarkBlue
 import com.bill.educar_e_brincar.ui.theme.DodgerBlue
 import com.bill.educar_e_brincar.ui.theme.EducareBrincarTheme
@@ -69,6 +70,12 @@ fun LetrasScreen(navController: NavController, modifier: Modifier = Modifier) {
                 onClick = { navController.navigate("aprender_letras") },
                 text = "Aprender",
                 colors = ButtonDefaults.buttonColors(containerColor = Yellow, contentColor = DodgerBlue)
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            AppButton(
+                onClick = { navController.navigate("desenhar_letras") },
+                text = "Desenhar",
+                colors = ButtonDefaults.buttonColors(containerColor = Blue, contentColor = LightPink)
             )
             Spacer(modifier = Modifier.height(24.dp))
             AppButton(
