@@ -13,7 +13,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.bill.educar_e_brincar.ui.theme.*
-import com.bill.educar_e_brincar.utils.SoundPlayer
 import com.bill.educar_e_brincar.utils.TextToSpeechManager
 
 data class Cor(val nome: String, val cor: Color)
@@ -33,18 +32,11 @@ fun AprenderCoresScreen(navController: NavController) {
         Cor("Branco", White)
     )
 
-    var indiceAtual by remember { mutableStateOf(0) }
+    var indiceAtual by remember { mutableIntStateOf(0) }
     val corAtual = cores[indiceAtual]
 
     LaunchedEffect(indiceAtual) {
-        // Lê o nome da cor usando Text-to-Speech
         TextToSpeechManager.speak(corAtual.nome)
-    }
-
-    DisposableEffect(Unit) {
-        onDispose {
-            SoundPlayer.release()
-        }
     }
 
     Scaffold(
